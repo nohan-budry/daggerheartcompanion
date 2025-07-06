@@ -123,7 +123,7 @@
         cursor: pointer;
 
         &:hover, &:focus, &.selected {
-          background-color: lightcyan;
+          background-color: var(--color-primary);
         }
       }
     }

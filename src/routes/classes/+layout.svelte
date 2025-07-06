@@ -57,11 +57,11 @@
         }
 
         a:hover, a:focus {
-          background-color: lightcyan;
+          background-color: var(--color-primary);
         }
 
         a.selected {
-          background-color: lightcyan;
+          background-color: var(--color-primary);
         }
       }
     }
