@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+html {
+  --color-primary: aliceblue;
+  --side-spacing-size: 1rem;
+}
+
+.w-app {
+  @apply  md:mx-auto md:w-11/12 lg:w-10/12 xl:w-8/12;
+}

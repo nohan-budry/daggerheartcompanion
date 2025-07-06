@@ -18,123 +18,102 @@
     })
 </script>
 
-<h1>{classData.name}</h1>
+<div class="flex flex-col gap-4">
+    <p class="description">{classData.description}</p>
 
-<p>{classData.description}</p>
+    <div class="w-full flex flex-wrap gap-x-16 gap-y-4">
+        <div>
+            <div class="flex gap-x-2">
+                <div class="font-semibold">Evasion:</div>
+                <div class="description text-right flex-1">{classData.startingEvasion}</div>
+            </div>
+            <div class="flex gap-x-2">
+                <div class="font-semibold">Hit Points:</div>
+                <div class="description text-right flex-1">{classData.startingHitPoints}</div>
+            </div>
+        </div>
 
-<div class="class-details">
-    <div class="base-traits">
-        <div>Evasion:</div>
-        <div>{classData.startingEvasion}</div>
-        <div>Hit Points:</div>
-        <div>{classData.startingHitPoints}</div>
+        <div>
+            <div class="font-semibold">Domains</div>
+            <div class="description">{classData.domains.join(' & ')}</div>
+        </div>
+
+        <div>
+            <div class="font-semibold">Class items (choose one)</div>
+            {#each classData.classItems as item}
+                <div class="description">{item}</div>
+            {/each}
+        </div>
     </div>
 
-    <div>
-        <div><b>Domains</b></div>
-        <div>{classData.domains.join(' & ')}</div>
-    </div>
-
-    <div>
-        <div><b>Class items (choose one)</b></div>
-        {#each classData.classItems as item}
-            <div>{item}</div>
-        {/each}
-    </div>
-</div>
-
-<div class="class-features">
     <h2>Hope Features</h2>
+
     {#each classData.hopeFeatures as feature}
-        <p><b>{feature.name}:</b> {feature.description}</p>
+        <p>
+            <span class="font-semibold">{feature.name}:</span>
+            <span class="description">{feature.description}</span>
+        </p>
     {/each}
 
     <h2>Class Features</h2>
-    {#each classData.classFeatures as feature}
-        <p><b>{feature.name}:</b> {feature.description}</p>
-    {/each}
-</div>
 
-<div class="subclasses">
-    <div class="subclass-tabs">
-        <h2>Subclasses</h2>
+    {#each classData.classFeatures as feature}
+        <p>
+            <span class="font-semibold">{feature.name}:</span>
+            <span class="description">{feature.description}</span>
+        </p>
+    {/each}
+
+    <h1 class="text-2xl font-semibold">Subclasses</h1>
+
+    <div class="flex gap-x-4">
         {#each classData.subclasses as subclass, index}
-            <button class="subclass-tab" class:selected={index === selectedSubclassIndex}
-                 onclick={() => selectedSubclassIndex = index}>
+            <button class="border px-2 py-1" class:active={index === selectedSubclassIndex}
+                    onclick={() => selectedSubclassIndex = index}>
                 {subclass.name}
             </button>
         {/each}
     </div>
 
-    <div class="selected-subclass">
-<!--        <h2>{selectedSubclass.name}</h2>-->
-        <p>{selectedSubclass.description}</p>
+    <p>{selectedSubclass.description}</p>
 
-        <h3>Foundation Features</h3>
-        {#each selectedSubclass.features.foundation as feature}
-            <p><b>{feature.name}:</b> {feature.description}</p>
-        {/each}
+    <h2>Foundation Features</h2>
+    {#each selectedSubclass.features.foundation as feature}
+        <p>
+            <span class="font-semibold">{feature.name}:</span>
+            <span class="description">{feature.description}</span>
+        </p>
+    {/each}
 
-        <h3>Specialization Features</h3>
-        {#each selectedSubclass.features.specialization as feature}
-            <p><b>{feature.name}:</b> {feature.description}</p>
-        {/each}
+    <h2>Specialization Features</h2>
+    {#each selectedSubclass.features.specialization as feature}
+        <p>
+            <span class="font-semibold">{feature.name}:</span>
+            <span class="description">{feature.description}</span>
+        </p>
+    {/each}
 
-        <h3>Mastery Features</h3>
-        {#each selectedSubclass.features.mastery as feature}
-            <p><b>{feature.name}:</b> {feature.description}</p>
-        {/each}
-    </div>
+    <h2>Mastery Features</h2>
+    {#each selectedSubclass.features.mastery as feature}
+        <p>
+            <span class="font-semibold">{feature.name}:</span>
+            <span class="description">{feature.description}</span>
+        </p>
+    {/each}
 </div>
 
-<style lang="scss">
+<style lang="postcss">
+    @reference "tailwindcss";
 
-  h1, h2, p {
-    padding-bottom: 1rem;
-  }
-
-  .class-details {
-    display: flex;
-    justify-content: start;
-    gap: 4rem;
-
-    .base-traits {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: min-content min-content;
-      grid-column-gap: 1rem;
-      grid-row-gap: 0;
-
-      div:nth-child(2n+1) {
-        font-weight: bold;
-      }
-
-      div:nth-child(2n) {
-        text-align: right;
-      }
+    .active {
+        @apply bg-blue-200;
     }
-  }
 
-  .subclasses {
-    .subclass-tabs {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding-bottom: 1rem;
-
-      h2 {
-        padding-bottom: 0;
-      }
-
-      .subclass-tab {
-        padding: 0.2rem 1rem;
-        border-bottom: 1px solid black;
-        cursor: pointer;
-
-        &:hover, &:focus, &.selected {
-          background-color: var(--color-primary);
-        }
-      }
+    .description {
+        @apply text-black italic;
     }
-  }
+
+    h2 {
+        @apply text-xl font-semibold;
+    }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '$lib/assets/css/main.scss';
+    import '$lib/assets/css/main.css';
     import dhCompatibleSVG from '$lib/assets/images/dh-compatible.svg'
     import {page} from "$app/state";
     import {base} from "$app/paths";
@@ -20,80 +20,39 @@
     }
 </script>
 
-<div class="content">
-    <nav>
-        {#each navLinks as navLink}
-            <a class:active={isCurrentPage(navLink.path)} href={navLink.path}>
-                {navLink.name}
-            </a>
-        {/each}
+<div class="min-h-screen -mb-4 pb-8">
+    <nav class="bg-blue-100">
+        <div class="w-app p-4 flex gap-4">
+            {#each navLinks as navLink}
+                <a class="px-4 py-2 hover:text-blue-400 first:-ml-4 last:-mr-4"
+                   class:active={isCurrentPage(navLink.path)} href={navLink.path}>
+                    {navLink.name}
+                </a>
+            {/each}
+        </div>
     </nav>
 
-    <div class="page">
+    <div class="p-4 w-app">
         {@render children()}
     </div>
 </div>
 
-<footer>
-    <div>
-        This product includes materials from the Daggerheart System Reference Document 1.0,
-        © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License.
-        More information can be found at <a href="https://www.daggerheart.com">https://www.daggerheart.com</a>.
-        There are no previous modifications by others.
+<footer class="bg-blue-100">
+    <div class="w-app flex flex-col gap-4 p-4 md:flex-row">
+        <div>
+            This product includes materials from the Daggerheart System Reference Document 1.0,
+            © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License.
+            More information can be found at <a class="text-blue-400" href="https://www.daggerheart.com">https://www.daggerheart.com</a>.
+            There are no previous modifications by others.
+        </div>
+        <img class="w-64 m-auto" src="{dhCompatibleSVG}" alt="Daggerheart Compatible"/>
     </div>
-    <img src="{dhCompatibleSVG}" alt="Daggerheart Compatible"/>
 </footer>
 
-<style lang="scss">
-  @use "sass:color";
+<style lang="postcss">
+    @reference "tailwindcss";
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    min-height: 100vh;
-    padding-bottom: 3rem;
-    margin-bottom: -1rem;
-
-    nav {
-      position: sticky;
-      top: 0;
-      left: 0;
-
-      display: flex;
-      gap: 2rem;
-
-      padding: 2rem var(--side-spacing-size);
-      background-color: var(--color-primary);
-
-      a {
-        text-decoration: none;
-        color: color.adjust(black, $lightness: 35%, $space: hsl);
-        text-transform: uppercase;
-        padding: 0.5rem 1rem;
-
-        &:hover, &:focus, &.active {
-          color: black;
-          border-bottom: 1px solid black;
-        }
-      }
+    .active {
+        @apply text-blue-400 border-b border-b-blue-400;
     }
-
-    .page {
-      flex: 1;
-    }
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 2rem var(--side-spacing-size);
-    background-color: var(--color-primary);
-    gap: 4rem;
-
-    img {
-      max-width: 300px;
-    }
-  }
 </style>

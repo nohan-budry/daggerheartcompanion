@@ -10,65 +10,28 @@
     }
 </script>
 
-<div class="content">
-    <nav>
-        <ul>
-            {#each classesData as classData}
-                <li>
-                    <a class:selected={page.url.pathname === classUrl(classData.name)}
-                       href={classUrl(classData.name)}>
-                        {classData.name}
-                    </a>
-                </li>
-            {/each}
-        </ul>
+<div>
+    <h1 class="mb-4 text-2xl font-semibold">Classes</h1>
+
+    <nav class="flex flex-row flex-wrap gap-2">
+        {#each classesData as classData}
+            <a class="border px-2 py-1 border-b-black"
+               class:active={page.url.pathname === classUrl(classData.name)}
+               href={classUrl(classData.name)}>
+                {classData.name}
+            </a>
+        {/each}
     </nav>
-    <main>
+
+    <main class="mt-4">
         {@render children()}
     </main>
 </div>
 
-<style lang="scss">
-  .content {
-    width: 80%;
-    margin: auto;
+<style lang="postcss">
+    @reference "tailwindcss";
 
-    display: flex;
-    gap: 2rem;
-  }
-
-  nav {
-    flex: 1;
-
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-        border-bottom: 1px solid black;
-
-        a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          padding: 0.5rem;
-
-          color: black;
-          text-decoration: none;
-        }
-
-        a:hover, a:focus {
-          background-color: var(--color-primary);
-        }
-
-        a.selected {
-          background-color: var(--color-primary);
-        }
-      }
+    .active {
+        @apply bg-blue-200;
     }
-  }
-
-  main {
-    flex: 3;
-  }
 </style>
