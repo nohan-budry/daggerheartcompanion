@@ -24,9 +24,9 @@
 
 <div class="min-h-screen -mb-4 pb-8">
     <nav class="bg-blue-100">
-        <div class="w-app p-4 flex gap-4">
+        <div class="w-app p-4 flex flex-wrap gap-4">
             {#each navLinks as navLink}
-                <a class="px-4 py-2 hover:text-blue-400 first:-ml-4 last:-mr-4"
+                <a class="px-4 py-2 hover:text-blue-400"
                    class:active={isCurrentPage(navLink.path)} href={navLink.path}>
                     {navLink.name}
                 </a>
