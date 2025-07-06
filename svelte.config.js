@@ -24,7 +24,7 @@ const config = {
       entries: prerenderEntries,
     },
     paths: {
-      base: process.env.PUBLIC_APP_PATH ?? '',
+      base: process.env.PUBLIC_APP_PATH ?? '/dh-tools',
     },
   }
 };

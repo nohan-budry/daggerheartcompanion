@@ -16,7 +16,7 @@
             return page.url.pathname === path;
         }
 
-        return !!page.url.pathname.startsWith(base + path);
+        return !!page.url.pathname.startsWith(path);
     }
 </script>
 
