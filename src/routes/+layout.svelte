@@ -12,11 +12,11 @@
     ];
 
     function isCurrentPage(path: string): boolean {
-        if (path === '/') {
+        if (path === base + '/') {
             return page.url.pathname === path;
         }
 
-        return !!page.url.pathname.startsWith(path);
+        return !!page.url.pathname.startsWith(base + path);
     }
 </script>
 
