@@ -9,6 +9,7 @@
     let navLinks = [
         {path: `${base}/`, name: 'Home'},
         {path: `${base}/ancestries`, name: 'Ancestries'},
+        {path: `${base}/communities`, name: 'Communities'},
         {path: `${base}/classes`, name: 'Classes'},
     ];
 
