@@ -30,9 +30,10 @@ jobs:
 
       - name: Build the project with TAG
         env:
-          BUILD_VERSION: ${{ github.ref_name }}
+          PUBLIC_APP_VERSION: ${{ github.ref_name }}
+          PUBLIC_APP_PATH: /dh-tools
         run: |
-          echo "Building with tag: $BUILD_VERSION"
+          echo "Building with tag $PUBLIC_APP_VERSION and path $PUBLIC_APP_PATH"
           npm run build
 
       - name: Upload build artifacts
