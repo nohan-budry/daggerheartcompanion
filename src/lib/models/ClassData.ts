@@ -1,7 +1,4 @@
-export interface Feature {
-    name: string,
-    description: string,
-}
+import type Feature from "$lib/models/Feature";
 
 export interface Subclass {
     name: string,
