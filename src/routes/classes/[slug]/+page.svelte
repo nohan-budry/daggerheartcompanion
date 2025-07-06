@@ -59,10 +59,10 @@
     <div class="subclass-tabs">
         <h2>Subclasses</h2>
         {#each classData.subclasses as subclass, index}
-            <div class="subclass-tab" class:selected={index === selectedSubclassIndex}
-                 on:click={() => selectedSubclassIndex = index}>
+            <button class="subclass-tab" class:selected={index === selectedSubclassIndex}
+                 onclick={() => selectedSubclassIndex = index}>
                 {subclass.name}
-            </div>
+            </button>
         {/each}
     </div>
 
@@ -89,10 +89,14 @@
 
 <style lang="scss">
 
+  h1, h2, p {
+    padding-bottom: 1rem;
+  }
+
   .class-details {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: start;
+    gap: 4rem;
 
     .base-traits {
       display: grid;
@@ -116,6 +120,11 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+      padding-bottom: 1rem;
+
+      h2 {
+        padding-bottom: 0;
+      }
 
       .subclass-tab {
         padding: 0.2rem 1rem;

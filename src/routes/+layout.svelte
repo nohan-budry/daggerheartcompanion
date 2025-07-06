@@ -44,6 +44,8 @@
 </footer>
 
 <style lang="scss">
+  @use "sass:color";
+
   .content {
     display: flex;
     flex-direction: column;
@@ -65,7 +67,7 @@
 
       a {
         text-decoration: none;
-        color: lighten(black, 35%);
+        color: color.adjust(black, $lightness: 35%, $space: hsl);
         text-transform: uppercase;
         padding: 0.5rem 1rem;
 
