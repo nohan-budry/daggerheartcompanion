@@ -2,12 +2,13 @@
     import '$lib/assets/css/main.scss';
     import dhCompatibleSVG from '$lib/assets/images/dh-compatible.svg'
     import {page} from "$app/state";
+    import {base} from "$app/paths";
 
     let {children} = $props();
 
     let navLinks = [
-        {path: '/', name: 'Home'},
-        {path: '/classes', name: 'Classes'},
+        {path: `${base}/`, name: 'Home'},
+        {path: `${base}/classes`, name: 'Classes'},
     ];
 
     function isCurrentPage(path: string): boolean {

@@ -1,11 +1,12 @@
 <script lang="ts">
     import {page} from "$app/state";
+    import {base} from "$app/paths";
 
     let {children, data} = $props();
     let {classesData} = data;
 
     function classUrl(name: string): string {
-        return '/classes/' + name.toLowerCase().replace(/\s/g, '-');
+        return base + '/classes/' + name.toLowerCase().replace(/\s/g, '-');
     }
 </script>
 
