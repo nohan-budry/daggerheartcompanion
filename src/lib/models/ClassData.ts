@@ -1,5 +1,19 @@
 import type Feature from "$lib/models/Feature";
 
+export interface Beastform {
+    category: string,
+    examples: string[],
+    traits: {},
+    evasion: 2,
+    attack: {
+        range: string
+        trait: string,
+        damage: string
+    },
+    advantages: string[],
+    features: Feature[]
+}
+
 export interface Subclass {
     name: string,
     description: string,
@@ -21,5 +35,8 @@ export interface ClassData {
     hopeFeatures: Feature[]
     classFeatures: Feature[]
     subclasses: Subclass[]
-    beastformOptions?: {}
+    beastformOptions?: {
+        tier1: Beastform[]
+        [tier:string]: Beastform[]
+    }
 }

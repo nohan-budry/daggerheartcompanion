@@ -16,6 +16,18 @@
 
         untrack(() => selectedSubclassIndex = 0);
     })
+
+    function traitBonuses(traits: { [k: string]: number }): string[] {
+        return Object.entries(traits).map((trait) => traitBonusString(...trait));
+    }
+
+    function traitBonusString(trait: string, value: number): string {
+        return `${bonusValue(value)} ${trait}`;
+    }
+
+    function bonusValue(value: number): string {
+        return (value >= 0 ? '+' : '') + value;
+    }
 </script>
 
 <div class="flex flex-col gap-4">
@@ -64,7 +76,7 @@
         </p>
     {/each}
 
-    <h1 class="text-2xl font-semibold">Subclasses</h1>
+    <h1>Subclasses</h1>
 
     <div class="flex gap-x-4">
         {#each classData.subclasses as subclass, index}
@@ -100,6 +112,57 @@
             <span class="description">{feature.description}</span>
         </p>
     {/each}
+
+    {#if classData.beastformOptions}
+        <h1>Beastform List</h1>
+
+        {#each [1, 2, 3, 4] as tier}
+            {#if !!classData.beastformOptions['tier' + tier]}
+                <h2>Tier {tier}</h2>
+
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+                    {#each classData.beastformOptions['tier' + tier] as beastform}
+                        <div class="flex flex-col gap-2 border p-2 w-full">
+                            <h3>{beastform.category}</h3>
+                            {#if beastform.examples?.length}
+                                <div>
+                                    <span class="font-semibold">Beast examples:</span>
+                                    <span class="description">{beastform.examples.join(', ')}, etc.</span>
+                                </div>
+                            {/if}
+                            {#if beastform.traits}
+                                <div>
+                                    <span class="font-semibold">Traits:</span>
+                                    <span class="description">{traitBonuses(beastform.traits).join(', ')}</span>
+                                </div>
+                            {/if}
+                            {#if beastform.evasion}
+                                <div>
+                                    <span class="font-semibold">Evasion:</span>
+                                    <span class="description">{bonusValue(beastform.evasion)}</span>
+                                </div>
+                            {/if}
+                            {#if beastform.attack}
+                                <div>
+                                    <span class="font-semibold">Attack:</span>
+                                    <span class="description">
+                                    {beastform.attack.range} {beastform.attack.trait} {beastform.attack.damage}
+                                </span>
+                                </div>
+                            {/if}
+                            {#each beastform.features as feature}
+                                <p>
+                                    <span class="font-semibold">{feature.name}:</span>
+                                    <span class="description">{feature.description}</span>
+                                </p>
+                            {/each}
+                        </div>
+                    {/each}
+                </div>
+            {/if}
+        {/each}
+    {/if}
+
 </div>
 
 <style lang="postcss">
@@ -113,7 +176,11 @@
         @apply text-black italic;
     }
 
-    h2 {
+    h1 {
+        @apply text-2xl font-semibold;
+    }
+
+    h2, h3 {
         @apply text-xl font-semibold;
     }
 </style>
