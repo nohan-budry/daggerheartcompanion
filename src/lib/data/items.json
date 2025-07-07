@@ -1,0 +1,476 @@
+[
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Broadsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Reliable",
+        "description": "+1 to attack rolls"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Longsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d10+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Battleaxe",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d10+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Greatsword",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d10+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Massive",
+        "description": "−1 to Evasion; on a successful attack, roll an additional damage die and discard the lowest result."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Mace",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d8+1",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Warhammer",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d12+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d8+1",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Quarterstaff",
+    "trait": "Instinct",
+    "range": "Melee",
+    "damage": "d10+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Cutlass",
+    "trait": "Presence",
+    "range": "Melee",
+    "damage": "d8+1",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Rapier",
+    "trait": "Presence",
+    "range": "Melee",
+    "damage": "d8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Quick",
+        "description": "When you make an attack, you can mark a Stress to target another creature within range."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Halberd",
+    "trait": "Strength",
+    "range": "Very Close",
+    "damage": "d10+2",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Cumbersome",
+        "description": "−1 to Finesse"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Spear",
+    "trait": "Finesse",
+    "range": "Very Close",
+    "damage": "d8+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Shortbow",
+    "trait": "Agility",
+    "range": "Far",
+    "damage": "d6+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Crossbow",
+    "trait": "Finesse",
+    "range": "Far",
+    "damage": "d6+1",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Longbow",
+    "trait": "Agility",
+    "range": "Very Far",
+    "damage": "d8+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Cumbersome",
+        "description": "−1 to Finesse"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Arcane Gauntlets",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d10+3",
+    "damageType": "mag",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Hallowed Axe",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d8+1",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Glowing Rings",
+    "trait": "Agility",
+    "range": "Very Close",
+    "damage": "d10+2",
+    "damageType": "mag",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Hand Runes",
+    "trait": "Instinct",
+    "range": "Very Close",
+    "damage": "d10",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Returning Blade",
+    "trait": "Finesse",
+    "range": "Close",
+    "damage": "d8",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Returning",
+        "description": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Shortstaff",
+    "trait": "Instinct",
+    "range": "Close",
+    "damage": "d8+1",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Dualstaff",
+    "trait": "Instinct",
+    "range": "Far",
+    "damage": "d6+3",
+    "damageType": "mag",
+    "burden": "Two-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Scepter",
+    "trait": "Presence",
+    "range": "Far",
+    "damage": "d6",
+    "damageType": "mag",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Versatile",
+        "description": "This weapon can also be used with these statistics—Presence, Melee, d8."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Wand",
+    "trait": "Knowledge",
+    "range": "Far",
+    "damage": "d6+1",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Greatstaff",
+    "trait": "Knowledge",
+    "range": "Very Far",
+    "damage": "d6",
+    "damageType": "mag",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Powerful",
+        "description": "On a successful attack, roll an additional damage die and discard the lowest result."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Shortsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+2 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Round Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Protective",
+        "description": "+1 to Armor Score"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Tower Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Barrier",
+        "description": "+2 to Armor Score; −1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Small Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+2 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Whip",
+    "trait": "Presence",
+    "range": "Very Close",
+    "damage": "d6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Startling",
+        "description": "Mark a Stress to crack the whip and force all adversaries within Melee range back to Close range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Grappler",
+    "trait": "Finesse",
+    "range": "Close",
+    "damage": "d6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Hooked",
+        "description": "On a successful attack, you can pull the target into Melee range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 1,
+    "name": "Hand Crossbow",
+    "trait": "Finesse",
+    "range": "Far",
+    "damage": "d6+1",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": []
+  },
+  {
+    "type": "Armor",
+    "tier": 1,
+    "name": "Gambeson Armor",
+    "thresholds": "5/11",
+    "score": 3,
+    "features": [
+      {
+        "name": "Flexible",
+        "description": "+1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Armor",
+    "tier": 1,
+    "name": "Leather Armor",
+    "thresholds": "6/13",
+    "score": 3,
+    "features": []
+  },
+  {
+    "type": "Armor",
+    "tier": 1,
+    "name": "Chainmail Armor",
+    "thresholds": "7/15",
+    "score": 4,
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Armor",
+    "tier": 1,
+    "name": "Full Plate Armor",
+    "thresholds": "8/17",
+    "score": 4,
+    "features": [
+      {
+        "name": "Very Heavy",
+        "description": "−2 to Evasion; −1 to Agility"
+      }
+    ]
+  }
+]
