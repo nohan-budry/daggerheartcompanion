@@ -11,6 +11,7 @@
         {path: `${base}/ancestries`, name: 'Ancestries'},
         {path: `${base}/communities`, name: 'Communities'},
         {path: `${base}/classes`, name: 'Classes'},
+        {path: `${base}/domains`, name: 'Domains'},
     ];
 
     function isCurrentPage(path: string): boolean {
