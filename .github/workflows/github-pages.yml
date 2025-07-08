@@ -31,9 +31,8 @@ jobs:
       - name: Build the project with TAG
         env:
           PUBLIC_APP_VERSION: ${{ github.ref_name }}
-          PUBLIC_APP_PATH: /${{ github.repository_id }}
         run: |
-          echo "Building with tag $PUBLIC_APP_VERSION and path $PUBLIC_APP_PATH"
+          echo "Building with tag $PUBLIC_APP_VERSION"
           npm run build
 
       - name: Upload build artifacts
