@@ -31,7 +31,7 @@ jobs:
       - name: Build the project with TAG
         env:
           PUBLIC_APP_VERSION: ${{ github.ref_name }}
-          PUBLIC_APP_PATH: /dh-tools
+          PUBLIC_APP_PATH: /${{ github.repository_id }}
         run: |
           echo "Building with tag $PUBLIC_APP_VERSION and path $PUBLIC_APP_PATH"
           npm run build
