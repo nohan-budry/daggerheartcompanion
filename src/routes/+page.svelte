@@ -1,3 +1,3 @@
 <main>
-    <h1>Welcome to DH.tools</h1>
+    <h1>Welcome to Daggerheart Companion</h1>
 </main>
