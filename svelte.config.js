@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
+import {dev} from "$app/environment";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +13,7 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
     paths: {
-      base: process.env.PUBLIC_APP_PATH ?? '/dh-tools',
+      base: dev ? '/daggerheartcompanion' : process.env.PUBLIC_APP_PATH ?? '',
     },
   }
 };
