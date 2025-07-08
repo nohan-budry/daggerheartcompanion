@@ -89,6 +89,13 @@
 
     <p>{selectedSubclass.description}</p>
 
+    {#if selectedSubclass.spellcastTrait}
+        <p>
+            <span class="font-semibold">Spellcast:</span>
+            <span class="description">{selectedSubclass.spellcastTrait}</span>
+        </p>
+    {/if}
+
     <h2>Foundation Features</h2>
     {#each selectedSubclass.features.foundation as feature}
         <p>
