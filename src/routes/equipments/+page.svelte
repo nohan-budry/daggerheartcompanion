@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col gap-4">
-    <h1>Items</h1>
+    <h1>Equipments</h1>
 
     <p class="description">
         Players can choose one Tier 1 primary weapon, secondary weapon and armor during character creation.<br/>

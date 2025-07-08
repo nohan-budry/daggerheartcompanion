@@ -1,6 +1,6 @@
 import type Feature from "$lib/models/Feature";
 
-export default interface Item {
+export default interface Equipment {
     type: string
     tier: number
     name: string
