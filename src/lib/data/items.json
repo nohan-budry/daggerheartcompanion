@@ -472,5 +472,53 @@
         "description": "−2 to Evasion; −1 to Agility"
       }
     ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Light-Frame Wheelchair",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Quick",
+        "description": "When you make an attack, you can mark a Stress to target another creature within range."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Heavy-Frame Wheelchair",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d12+3",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 1,
+    "name": "Arcane-Frame Wheelchair",
+    "trait": "Strength",
+    "range": "Far",
+    "damage": "d6",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Reliable",
+        "description": "+1 to attack rolls."
+      }
+    ]
   }
 ]
