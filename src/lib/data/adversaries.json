@@ -205,7 +205,7 @@
     "hitPoints": 3,
     "stress": 4,
     "attack": {
-      "bonus": null,
+      "bonus": -4,
       "name": "Daggers",
       "range": "Melee",
       "damage": "1d4+2 phy"
@@ -316,7 +316,7 @@
     "hitPoints": 6,
     "stress": 3,
     "attack": {
-      "bonus": null,
+      "bonus": -2,
       "name": "Proboscis",
       "range": "Melee",
       "damage": "1d8+3 phy"
@@ -359,7 +359,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -4,
       "name": "Claws",
       "range": "Melee",
       "damage": "1 phy"
@@ -701,7 +701,7 @@
     "hitPoints": 7,
     "stress": 4,
     "attack": {
-      "bonus": null,
+      "bonus": -3,
       "name": "Club",
       "range": "Melee",
       "damage": "1d4+6 phy"
@@ -738,7 +738,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -2,
       "name": "Daggers",
       "range": "Melee",
       "damage": "2 phy"
@@ -860,7 +860,7 @@
     "hitPoints": 3,
     "stress": 2,
     "attack": {
-      "bonus": null,
+      "bonus": -1,
       "name": "Shortbow",
       "range": "Far",
       "damage": "1d10+2 phy"
@@ -892,7 +892,7 @@
     "hitPoints": 3,
     "stress": 3,
     "attack": {
-      "bonus": null,
+      "bonus": -4,
       "name": "Club",
       "range": "Melee",
       "damage": "1d4+1 phy"
@@ -1079,7 +1079,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -2,
       "name": "Clawed Branch",
       "range": "Melee",
       "damage": "4 phy"
@@ -1160,7 +1160,7 @@
     "hitPoints": 2,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -1,
       "name": "Ooze Appendage",
       "range": "Melee",
       "damage": "1d4+1 mag"
@@ -1230,7 +1230,7 @@
     "hitPoints": 2,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -1,
       "name": "Ooze Appendage",
       "range": "Melee",
       "damage": "1d4+2 mag"
@@ -1259,7 +1259,7 @@
     "hitPoints": 3,
     "stress": 5,
     "attack": {
-      "bonus": null,
+      "bonus": -3,
       "name": "Rapier",
       "range": "Melee",
       "damage": "1d6+1 phy"
@@ -1493,7 +1493,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -1,
       "name": "Bone Claws",
       "range": "Melee",
       "damage": "1 phy"
@@ -1647,7 +1647,7 @@
     "hitPoints": 6,
     "stress": 2,
     "attack": {
-      "bonus": null,
+      "bonus": -3,
       "name": "Claws",
       "range": "Melee",
       "damage": "1d8+2 phy"
@@ -1713,7 +1713,7 @@
   {
     "name": "Tangle Bramble Swarm",
     "tier": 1,
-    "type": "Horde (/HP)",
+    "type": "Horde (3/HP)",
     "description": "A cluster of animate, blood-drinking tumbleweeds, each the size of a large gourd.",
     "motivesAndTactics": [
       "digest",
@@ -1767,7 +1767,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -1,
       "name": "Thorns",
       "range": "Melee",
       "damage": "2 phy"
@@ -1979,7 +1979,7 @@
     "hitPoints": 1,
     "stress": 1,
     "attack": {
-      "bonus": null,
+      "bonus": -3,
       "name": "Bite",
       "range": "Melee",
       "damage": "2 phy"

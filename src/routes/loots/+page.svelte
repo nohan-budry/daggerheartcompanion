@@ -23,10 +23,10 @@
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {#each selectedCategory as loot}
             <div class="flex flex-col gap-2 border p-2 w-full">
-                <h3>
+                <h2>
                     <span>{loot.name}</span>
                     <span class="italic font-normal">- {loot.roll}</span>
-                </h3>
+                </h2>
                 <div>
                     <span class="italic">{loot.description}</span>
                 </div>
@@ -42,7 +42,7 @@
         @apply text-2xl font-semibold;
     }
 
-    h2, h3 {
+    h2 {
         @apply text-xl font-semibold;
     }
 
