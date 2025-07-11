@@ -10,12 +10,13 @@ declare global {
 	}
 
 	declare module 'virtual:dh-search-index' {
-		const searchIndex: {
+		declare class SearchIndex {
 			name: string;
 			path: string;
 			description: string;
 			source: string;
-		}[];
+		}
+		const searchIndex: SearchIndex[];
 		export default searchIndex;
 	}
 }

@@ -5,16 +5,22 @@
 
     let {
         isOpen = false,
-        close = () => {
-        },
-        navigate = (_: string) => {
-        },
+        close,
+        navigate,
     } = $props();
 
+    $effect(() => {
+        if (isOpen) {
+            searchInputElement.focus();
+            searchInputElement.select()
+        }
+    })
+
+    let searchInputElement: HTMLInputElement;
     let searchInput = $state('');
     let searchResults = $derived(
         searchInput.length
-            ? searchIndex.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+            ? searchIndex.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
             : [],
     )
 
@@ -25,14 +31,23 @@
     function onNavigate(path: string) {
         navigate(base + path);
     }
+
+    function handleKeydown(event: KeyboardEvent) {
+        if (event.key === 'Escape') {
+            close();
+        }
+    }
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
 
 {#if isOpen}
     <div class="background" onclick={onClose}>
         <div class="container py-4 flex flex-col gap-4 overflow-scroll" onclick={(e) => e.stopPropagation()}>
             <div class="mx-4 bg-blue-50">
-                <input type="text" bind:value={searchInput} placeholder="Search..."
-                       class="w-full px-8 py-4 focus:outline-1 focus:outline-blue-100 ">
+                <input type="text" placeholder="Search..."
+                       bind:value={searchInput} bind:this={searchInputElement}
+                       class="w-full px-4 py-4 focus:outline-1 focus:outline-blue-100 ">
             </div>
             {#each searchResults as result, index}
                 {#if index > 0}

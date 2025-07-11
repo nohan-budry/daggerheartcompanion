@@ -29,13 +29,11 @@
     }
 
     function searchNavigate(path: string) {
-        console.log('navigate');
         searchClose();
         goto(path);
     }
 
     function searchClose() {
-        console.log('close');
         isSearchOpen = false;
     }
 </script>
@@ -53,7 +51,7 @@
                     {navLink.name}
                 </a>
             {/each}
-            <button class="cursor-pointer" onclick={() => isSearchOpen = true}>Search</button>
+            <button class="cursor-pointer border px-2 py-1 hover:bg-blue-200" onclick={() => isSearchOpen = true}>Search</button>
         </div>
     </nav>
 
