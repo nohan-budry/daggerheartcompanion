@@ -8,6 +8,18 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	declare module 'virtual:dh-search-index' {
+		const searchIndex: {
+			name: string;
+			path: string;
+			description: string;
+			source: string;
+		}[];
+		export default searchIndex;
+	}
 }
 
 export {};
+
+

@@ -3,8 +3,11 @@
     import dhCompatibleSVG from '$lib/assets/images/dh-compatible.svg'
     import {page} from "$app/state";
     import {base} from "$app/paths";
+    import SearchComponent from "$lib/components/search-component/SearchComponent.svelte";
+    import {goto} from "$app/navigation";
 
     let {children} = $props();
+    let isSearchOpen = $state(false);
 
     let navLinks = [
         {path: `${base}/`, name: 'Home'},
@@ -24,7 +27,22 @@
 
         return !!page.url.pathname.startsWith(path);
     }
+
+    function searchNavigate(path: string) {
+        console.log('navigate');
+        searchClose();
+        goto(path);
+    }
+
+    function searchClose() {
+        console.log('close');
+        isSearchOpen = false;
+    }
 </script>
+
+<SearchComponent isOpen={isSearchOpen}
+                 close={searchClose}
+                 navigate={searchNavigate}/>
 
 <div class="min-h-screen -mb-4 pb-8">
     <nav class="bg-blue-100">
@@ -35,6 +53,7 @@
                     {navLink.name}
                 </a>
             {/each}
+            <button class="cursor-pointer" onclick={() => isSearchOpen = true}>Search</button>
         </div>
     </nav>
 
