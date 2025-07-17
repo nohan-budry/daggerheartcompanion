@@ -1,4 +1,4 @@
-import type {LayoutLoad} from "../../../.svelte-kit/types/src/routes/classes/$types";
+import type {LayoutLoad} from "./$types";
 import type Community from "$lib/models/Community";
 
 import rawCommunities from "$lib/data/communities.json";

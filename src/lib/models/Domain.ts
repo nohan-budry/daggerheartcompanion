@@ -6,7 +6,7 @@ export interface DomainCard {
     type: string
     recallCost: number
     feature?: string
-    features: Feature[]
+    features?: Feature[]
 }
 
 export default interface Domain {

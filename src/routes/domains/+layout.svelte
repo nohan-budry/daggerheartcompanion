@@ -1,12 +1,13 @@
 <script lang="ts">
     import {page} from "$app/state";
     import {base} from "$app/paths";
+    import {slugify} from "$lib/utils/slugify";
 
     let {children, data} = $props();
     let {domains} = data;
 
     function domainUrl(name: string): string {
-        return base + '/domains/' + name.toLowerCase().replace(/\s/g, '-');
+        return base + '/domains/' + slugify(name);
     }
 </script>
 
@@ -33,5 +34,9 @@
 
     .active {
         @apply bg-blue-200;
+    }
+
+    a {
+        @apply hover:bg-blue-200 focus:bg-blue-200 focus:border-blue-400;
     }
 </style>

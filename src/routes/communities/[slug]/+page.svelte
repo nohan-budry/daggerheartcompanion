@@ -1,5 +1,6 @@
 <script lang="ts">
     import type {PageProps} from './$types';
+    import {slugify} from '$lib/utils/slugify';
 
     let {data}: PageProps = $props();
     let {community} = $derived(data);
@@ -13,7 +14,7 @@
     <h2>Hope Features</h2>
 
     {#each community.features as feature}
-        <p>
+        <p id={`feature-${slugify(feature.name)}`}>
             <span class="font-semibold">{feature.name}:</span>
             <span class="description">{feature.description}</span>
         </p>

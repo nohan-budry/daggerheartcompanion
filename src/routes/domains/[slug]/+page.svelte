@@ -1,5 +1,6 @@
 <script lang="ts">
     import type {PageProps} from './$types';
+    import {slugify} from "$lib/utils/slugify";
 
     let {data}: PageProps = $props();
     let {domain} = $derived(data);
@@ -12,7 +13,8 @@
 
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {#each domain.cards as card}
-            <div class="flex flex-col gap-2 border p-2 w-full">
+            <div class="flex flex-col gap-2 border p-2 w-full"
+                id={`card-${slugify(card.name)}`}>
                 <h3>{card.name}</h3>
                 <div class="description">Level {card.level} {card.type}</div>
                 <div>

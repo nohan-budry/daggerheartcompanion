@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {slugify} from "$lib/utils/slugify";
+
     let {data} = $props();
     let {adversaries} = data;
 
@@ -22,7 +24,8 @@
 
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             {#each tier as adversary}
-                <div class="flex flex-col gap-2 border p-2 w-full">
+                <div id={'adversary-' + slugify(adversary.name)}
+                     class="flex flex-col gap-2 border p-2 w-full">
                     <h3>
                         <span>{adversary.name}</span>
                     </h3>

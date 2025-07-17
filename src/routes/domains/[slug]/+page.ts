@@ -1,9 +1,6 @@
 import {error} from '@sveltejs/kit';
 import type {PageLoad} from './$types';
-
-function slugify(name: string): string {
-    return name.toLowerCase().replace(/\s/g, '-');
-}
+import {slugify} from "$lib/utils/slugify";
 
 export const load: PageLoad = async ({parent, params}) => {
     let {domains} = await parent();
