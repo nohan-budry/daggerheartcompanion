@@ -93,7 +93,7 @@
                 </div>
                 {#if searchResults.length}
                     <div>
-                        {#each searchResults as result, index}
+                        {#each searchResults as result}
                             <hr class="text-gray-400">
                             <a class="focusable block px-8 py-4 hover:bg-blue-50 active:bg-blue-200 focus:bg-blue-200 cursor-pointer"
                                onclick={close} href={`${base}${result.path}`}>
@@ -107,8 +107,9 @@
                             </a>
                         {/each}
                     </div>
+                    <hr class="text-gray-400">
                 {/if}
-                <div class="sticky bottom-0 left-0 flex flex-row-reverse p-2 bg-white">
+                <div class="sticky bottom-0 left-0 flex flex-row-reverse px-4 py-2 bg-white">
                     <button class="focusable hover:text-blue-400 focus:text-blue-400 focus:outline-0 cursor-pointer"
                             onclick={close}>
                         Close
