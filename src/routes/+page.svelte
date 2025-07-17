@@ -8,7 +8,7 @@
         <p>This web app is a personal project I created while learning and preparing to play Daggerheart with friends.
             It includes content from the Daggerheart SRD 1.0.</p>
 
-        <p>You'll find all the essential information for Game masters and players with a focus on Tier 1 for now.
+        <p>You'll find all the essential information for Game Masters and Players with a focus on Tier 1 for now.
             Additional content will be added over time.</p>
 
         <p>This is a non-commercial fan project. It only includes material available in the SRD, and is meant to make
@@ -16,6 +16,8 @@
 
         <p>Feel free to use and share this companion to support your games and find information quickly with the search
             feature!</p>
+
+        <p>There are still a lot of content and features to add. So keep visiting regularly to check out what's new.</p>
     </div>
 
     <div class="mt-4">
