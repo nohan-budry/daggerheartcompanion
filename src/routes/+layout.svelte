@@ -73,6 +73,10 @@
         </div>
         <img class="w-64 m-auto" src="{dhCompatibleSVG}" alt="Daggerheart Compatible"/>
     </div>
+    <div class="p-4 w-app feedback">
+        <h1>Feedback or Bug Reports?</h1>
+        <p>Found a bug or have an idea for improvement? Feel free to reach out: <a href="mailto:nohan@daggerheartcompanion.com">nohan@daggerheartcompanion.com</a></p>
+    </div>
 </footer>
 
 <style lang="postcss">
@@ -80,5 +84,15 @@
 
     .active {
         @apply text-blue-400 border-b border-b-blue-400;
+    }
+
+    .feedback {
+        h1 {
+            @apply text-xl font-semibold;
+        }
+
+        a {
+            @apply text-blue-400;
+        }
     }
 </style>
