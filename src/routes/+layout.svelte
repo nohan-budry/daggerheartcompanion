@@ -75,7 +75,7 @@
     </div>
     <div class="p-4 w-app feedback">
         <h1>Feedback or Bug Reports?</h1>
-        <p>Found a bug or have an idea for improvement? Feel free to reach out: <a href="mailto:nohan@daggerheartcompanion.com">nohan@daggerheartcompanion.com</a></p>
+        <p>Found a bug or have an idea for improvement? Feel free to reach out: <a href="mailto:nohan@daggerheartcompanion.app">nohan@daggerheartcompanion.app</a></p>
     </div>
 </footer>
 
