@@ -26,7 +26,7 @@ async function generateIndex() {
     let adversaries = await import('./src/lib/data/adversaries.json') as Adversary[];
 
 
-    let searchIndex: { name: string, path: string, description: string, source: string }[] = [];
+    let searchIndex: { name: string, path: string, description?: string, source: string }[] = [];
 
     searchIndex.push(...ancestries.flatMap(ancestry => [
         {
@@ -80,29 +80,35 @@ async function generateIndex() {
         ...klass.subclasses.flatMap(subclass => [
             {
                 name: subclass.name,
-                path: '/classes/' + slugify(klass.name) + '/' + slugify(subclass.name),
+                path: '/classes/' + slugify(klass.name) + '/subclasses/' + slugify(subclass.name),
                 description: subclass.description,
                 source: 'SRD 1.0 - Class: ' + klass.name + ' - Subclass'
             },
             ...subclass.features.foundation.map((feature) => ({
                 name: feature.name,
-                path: '/classes/' + slugify(klass.name) + '/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
+                path: '/classes/' + slugify(klass.name) + '/subclasses/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
                 description: feature.description,
                 source: 'SRD 1.0 - Class: ' + klass.name + ' - Subclass: ' + subclass.name + ' - Foundation Feature'
             })),
             ...subclass.features.specialization.map((feature) => ({
                 name: feature.name,
-                path: '/classes/' + slugify(klass.name) + '/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
+                path: '/classes/' + slugify(klass.name) + '/subclasses/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
                 description: feature.description,
                 source: 'SRD 1.0 - Class: ' + klass.name + ' - Subclass: ' + subclass.name + ' - Specialization Feature'
             })),
             ...subclass.features.mastery.map((feature) => ({
                 name: feature.name,
-                path: '/classes/' + slugify(klass.name) + '/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
+                path: '/classes/' + slugify(klass.name) + '/subclasses/' + slugify(subclass.name) + '#feature-' + slugify(feature.name),
                 description: feature.description,
                 source: 'SRD 1.0 - Class: ' + klass.name + ' - Subclass: ' + subclass.name + ' - Mastery Feature'
             })),
-        ])
+        ]),
+        ...(klass.beastformOptions ?? [])
+            .flatMap((beastForms) => beastForms.map((beastForm) => ({
+                name: beastForm.category,
+                path: `/classes/${slugify(klass.name)}#beast-form-${slugify(beastForm.category)}`,
+                source: `SRD 1.0 - Class: ${klass.name} - Beastform`,
+            })))
     ]));
 
     searchIndex.push(...domains.flatMap(domain => [
@@ -122,21 +128,21 @@ async function generateIndex() {
 
     searchIndex.push(...equipments.map(equipment => ({
         name: equipment.name,
-        path: '/equipment/' + slugify(equipment.type) + '#equipment-' + slugify(equipment.name),
+        path: '/equipments/' + slugify(equipment.type) + '#equipment-' + slugify(equipment.name),
         description: `Tier ${equipment.tier} ${equipment.type}`,
         source: 'SRD 1.0 - Equipment'
     })));
 
     searchIndex.push(...reusableLoots.map(loot => ({
         name: loot.name,
-        path: '/loots/' + slugify(loot.type) + '#loot-' + slugify(loot.name),
+        path: '/loots/reusables' + '#loot-' + slugify(loot.name),
         description: loot.description,
         source: 'SRD 1.0 - Loot: ' + loot.type
     })));
 
     searchIndex.push(...consumableLoots.map(loot => ({
         name: loot.name,
-        path: '/loots/' + slugify(loot.type) + '#loot-' + slugify(loot.name),
+        path: '/loots/consumables' + '#loot-' + slugify(loot.name),
         description: loot.description,
         source: 'SRD 1.0 - Loot: ' + loot.type
     })));

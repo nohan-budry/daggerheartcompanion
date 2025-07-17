@@ -5,6 +5,10 @@ html {
   --side-spacing-size: 1rem;
 }
 
+a:focus,button:focus,input:focus,textarea:focus,select:focus {
+  @apply outline-none;
+}
+
 .w-app {
   @apply  md:mx-auto md:w-11/12 lg:w-10/12 xl:w-8/12;
 }

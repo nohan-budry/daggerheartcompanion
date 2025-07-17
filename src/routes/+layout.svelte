@@ -4,7 +4,6 @@
     import {page} from "$app/state";
     import {base} from "$app/paths";
     import SearchComponent from "$lib/components/search-component/SearchComponent.svelte";
-    import {goto} from "$app/navigation";
 
     let {children} = $props();
     let isSearchOpen = $state(false);
@@ -28,30 +27,34 @@
         return !!page.url.pathname.startsWith(path);
     }
 
-    function searchNavigate(path: string) {
-        searchClose();
-        goto(path);
-    }
-
     function searchClose() {
         isSearchOpen = false;
     }
+
+    function handleKeyDown(event: KeyboardEvent) {
+        if (!isSearchOpen) {
+            if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+                event.preventDefault();
+                isSearchOpen = true;
+            }
+        }
+    }
 </script>
 
-<SearchComponent isOpen={isSearchOpen}
-                 close={searchClose}
-                 navigate={searchNavigate}/>
+<svelte:window onkeydown={handleKeyDown}/>
+
+<SearchComponent isOpen={isSearchOpen} close={searchClose}/>
 
 <div class="min-h-screen -mb-4 pb-8">
     <nav class="bg-blue-100">
         <div class="w-app p-4 flex flex-wrap gap-4">
             {#each navLinks as navLink}
-                <a class="px-4 py-2 hover:text-blue-400"
+                <a class="px-4 py-2 hover:text-blue-400 focus:text-blue-400"
                    class:active={isCurrentPage(navLink.path)} href={navLink.path}>
                     {navLink.name}
                 </a>
             {/each}
-            <button class="cursor-pointer border px-2 py-1 hover:bg-blue-200" onclick={() => isSearchOpen = true}>Search</button>
+            <button class="cursor-pointer border px-2 py-1 hover:bg-blue-200 focus:bg-blue-200" onclick={() => isSearchOpen = true}>Search</button>
         </div>
     </nav>
 

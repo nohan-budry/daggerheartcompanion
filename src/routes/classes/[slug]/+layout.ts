@@ -1,11 +1,8 @@
 import {error} from '@sveltejs/kit';
-import type {PageLoad} from './$types';
+import type {LayoutLoad} from './$types';
+import {slugify} from "$lib/utils/slugify";
 
-function slugify(name: string): string {
-    return name.toLowerCase().replace(/\s/g, '-');
-}
-
-export const load: PageLoad = async ({parent, params}) => {
+export const load: LayoutLoad = async ({parent, params}) => {
     let {classesData} = await parent();
 
     let classData = classesData.find(

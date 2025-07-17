@@ -1,12 +1,13 @@
 <script lang="ts">
     import {page} from "$app/state";
     import {base} from "$app/paths";
+    import {slugify} from "$lib/utils/slugify";
 
     let {children, data} = $props();
     let {ancestries} = data;
 
     function ancestryUrl(name: string): string {
-        return base + '/ancestries/' + name.toLowerCase().replace(/\s/g, '-');
+        return base + '/ancestries/' + slugify(name);
     }
 </script>
 
@@ -15,7 +16,7 @@
 
     <nav class="flex flex-row flex-wrap gap-2">
         {#each ancestries as ancestry}
-            <a class="border px-2 py-1 border-b-black"
+            <a class="border px-2 py-1 border-b-black cu"
                class:active={page.url.pathname === ancestryUrl(ancestry.name)}
                href={ancestryUrl(ancestry.name)}>
                 {ancestry.name}
@@ -33,5 +34,9 @@
 
     .active {
         @apply bg-blue-200;
+    }
+
+    a {
+        @apply hover:bg-blue-200 focus:bg-blue-200 focus:border-blue-400;
     }
 </style>

@@ -1,12 +1,13 @@
 <script lang="ts">
     import {page} from "$app/state";
     import {base} from "$app/paths";
+    import {slugify} from "$lib/utils/slugify";
 
     let {children, data} = $props();
-    let {classesData} = data;
+    let {classesData} = $derived(data);
 
     function classUrl(name: string): string {
-        return base + '/classes/' + name.toLowerCase().replace(/\s/g, '-');
+        return base + '/classes/' + slugify(name);
     }
 </script>
 
@@ -16,7 +17,7 @@
     <nav class="flex flex-row flex-wrap gap-2">
         {#each classesData as classData}
             <a class="border px-2 py-1 border-b-black"
-               class:active={page.url.pathname === classUrl(classData.name)}
+               class:active={page.params.slug === slugify(classData.name)}
                href={classUrl(classData.name)}>
                 {classData.name}
             </a>
@@ -33,5 +34,9 @@
 
     .active {
         @apply bg-blue-200;
+    }
+
+    a {
+        @apply hover:bg-blue-200 focus:bg-blue-200 focus:border-blue-400;
     }
 </style>

@@ -1635,7 +1635,7 @@
   {
     "name": "Swarm Of Rats",
     "tier": 1,
-    "type": "Horde (/HP)",
+    "type": "Horde (10/HP)",
     "description": "A skittering mass of ordinary rodents moving as one like a ravenous wave.",
     "motivesAndTactics": [
       "consume",
