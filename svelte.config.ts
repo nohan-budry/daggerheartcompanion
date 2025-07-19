@@ -2,14 +2,15 @@ import adapter from '@sveltejs/adapter-static';
 import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
 import fs from 'fs';
 import path from 'path';
-import {slugify} from "./src/lib/utils/slugify.ts";
+import {slugify} from "./src/lib/utils/slugify";
+import type {ClassData} from "./src/lib/models/ClassData";
 
 const dev = process.env.NODE_ENV === 'development';
 let basePath = dev ? '/daggerheartcompanion' : process.env.PUBLIC_APP_PATH ?? '';
 
 const classes = JSON.parse(
   fs.readFileSync(path.resolve('./src/lib/data/classes.json'), 'utf-8')
-);
+) as ClassData[];
 
 
 let prerenderEntries = [];

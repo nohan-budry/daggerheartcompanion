@@ -1,17 +1,14 @@
 import {sveltekit} from '@sveltejs/kit/vite';
 import {defineConfig, type PluginOption} from 'vite';
 import tailwindcss from "@tailwindcss/vite";
-import type {Adversary} from "$lib/models/Adversary";
-import type Loot from "$lib/models/Loot";
-import type Equipment from "$lib/models/Equipment";
-import type Domain from "$lib/models/Domain";
-import type {ClassData} from "$lib/models/ClassData";
-import type Community from "$lib/models/Community";
-import type Ancestry from "$lib/models/Ancestry";
-
-function slugify(str: string): string {
-    return str.toLowerCase().replace(/\s/g, '-');
-}
+import type {Adversary} from "./src/lib/models/Adversary";
+import type Loot from "./src/lib/models/Loot";
+import type Equipment from "./src/lib/models/Equipment";
+import type Domain from "./src/lib/models/Domain";
+import type {ClassData} from "./src/lib/models/ClassData";
+import type Community from "./src/lib/models/Community";
+import type Ancestry from "./src/lib/models/Ancestry";
+import {slugify} from "./src/lib/utils/slugify";
 
 async function generateIndex() {
     console.log('Generating search index...');
