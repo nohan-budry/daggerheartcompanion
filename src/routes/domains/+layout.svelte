@@ -18,7 +18,7 @@
         {#each domains as domain}
             <a class="border px-2 py-1 border-b-black"
                class:active={page.url.pathname === domainUrl(domain.name)}
-               href={domainUrl(domain.name)}>
+               href={domainUrl(domain.name)} data-sveltekit-noscroll>
                 {domain.name}
             </a>
         {/each}

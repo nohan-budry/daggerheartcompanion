@@ -176,7 +176,6 @@ function searchIndexGenerator(): PluginOption {
     };
 }
 
-
 export default defineConfig({
     plugins: [searchIndexGenerator(), tailwindcss(), sveltekit()]
 });

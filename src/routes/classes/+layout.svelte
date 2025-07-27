@@ -18,7 +18,7 @@
         {#each classesData as classData}
             <a class="border px-2 py-1 border-b-black"
                class:active={page.params.slug === slugify(classData.name)}
-               href={classUrl(classData.name)}>
+               href={classUrl(classData.name)} data-sveltekit-noscroll>
                 {classData.name}
             </a>
         {/each}

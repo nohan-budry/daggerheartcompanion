@@ -1,6 +1,13 @@
 import {error} from '@sveltejs/kit';
-import type {PageLoad} from './$types';
+import type {EntryGenerator, PageLoad} from './$types';
 import {slugify} from "$lib/utils/slugify";
+import rawAncestries from '$lib/data/ancestries.json';
+import type Ancestry from "$lib/models/Ancestry";
+
+export const entries: EntryGenerator = async () => {
+    return (rawAncestries as Ancestry[])
+        .map(({name}) => ({slug: slugify(name)}));
+}
 
 export const load: PageLoad = async ({parent, params}) => {
     let {ancestries} = await parent();

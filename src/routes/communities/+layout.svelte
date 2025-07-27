@@ -18,7 +18,7 @@
         {#each communities as community}
             <a class="border px-2 py-1 border-b-black"
                class:active={page.url.pathname === communityUrl(community.name)}
-               href={communityUrl(community.name)}>
+               href={communityUrl(community.name)} data-sveltekit-noscroll>
                 {community.name}
             </a>
         {/each}

@@ -18,7 +18,7 @@
         {#each ancestries as ancestry}
             <a class="border px-2 py-1 border-b-black cu"
                class:active={page.url.pathname === ancestryUrl(ancestry.name)}
-               href={ancestryUrl(ancestry.name)}>
+               href={ancestryUrl(ancestry.name)} data-sveltekit-noscroll>
                 {ancestry.name}
             </a>
         {/each}

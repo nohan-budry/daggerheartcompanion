@@ -19,7 +19,7 @@
         {#each categories as category}
             <a class="border px-2 py-1"
                class:active={page.url.pathname.includes(slugify(category))}
-               href={`${base}/equipments/${slugify(category)}`}>
+               href={`${base}/equipments/${slugify(category)}`} data-sveltekit-noscroll>
                 {category}
             </a>
         {/each}

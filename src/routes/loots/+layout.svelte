@@ -9,11 +9,11 @@
     <h1>Loots</h1>
 
     <div class="flex gap-x-4">
-        <a class="border px-2 py-1" href={base + '/loots/reusables'}
+        <a class="border px-2 py-1" href={base + '/loots/reusables'} data-sveltekit-noscroll
            class:active={page.url.pathname.endsWith('/reusables')}>
             Reusable Items
         </a>
-        <a class="border px-2 py-1" href={base + '/loots/consumables'}
+        <a class="border px-2 py-1" href={base + '/loots/consumables'} data-sveltekit-noscroll
            class:active={page.url.pathname.endsWith('/consumables')}>
             Consumable Items
         </a>
