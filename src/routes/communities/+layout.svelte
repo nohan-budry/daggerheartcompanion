@@ -14,6 +14,12 @@
 <div>
     <h1 class="mb-4 text-2xl font-semibold">Communities</h1>
 
+    <p class="mb-4">
+        Communities represent a key aspect of the culture, class, or
+        environment of origin that has had the most influence over
+        your character’s upbringing.
+    </p>
+
     <nav class="flex flex-row flex-wrap gap-2">
         {#each communities as community}
             <a class="border px-2 py-1 border-b-black"

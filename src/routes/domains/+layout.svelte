@@ -14,6 +14,11 @@
 <div>
     <h1 class="mb-4 text-2xl font-semibold">Domains</h1>
 
+    <p class="mb-4">
+        Each class grants access to two domains. Each Domain comprises a collection
+        of cards granting features or special abilities expressing a particular theme.
+    </p>
+
     <nav class="flex flex-row flex-wrap gap-2">
         {#each domains as domain}
             <a class="border px-2 py-1 border-b-black"

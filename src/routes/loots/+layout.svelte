@@ -7,6 +7,7 @@
 
 <div class="flex flex-col gap-4">
     <h1>Loots</h1>
+    <p>Loot comprises any consumables or reusable items the party acquires.</p>
 
     <div class="flex gap-x-4">
         <a class="border px-2 py-1" href={base + '/loots/reusables'} data-sveltekit-noscroll
@@ -19,9 +20,8 @@
         </a>
     </div>
 
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-        {@render children()}
-    </div>
+
+    {@render children()}
 </div>
 
 <style lang="postcss">

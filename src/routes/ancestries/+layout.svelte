@@ -14,6 +14,12 @@
 <div>
     <h1 class="mb-4 text-2xl font-semibold">Ancestries</h1>
 
+    <p class="mb-4">
+        Ancestries represent your character’s lineage, which affects
+        their physical appearance and access to certain special
+        abilities.
+    </p>
+
     <nav class="flex flex-row flex-wrap gap-2">
         {#each ancestries as ancestry}
             <a class="border px-2 py-1 border-b-black cu"

@@ -14,6 +14,10 @@
 <div>
     <h1 class="mb-4 text-2xl font-semibold">Classes</h1>
 
+    <p class="mb-4">
+        A class is a role-based archetype that determines a PC's features and abilities.
+    </p>
+
     <nav class="flex flex-row flex-wrap gap-2">
         {#each classesData as classData}
             <a class="border px-2 py-1 border-b-black"
