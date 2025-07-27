@@ -66,7 +66,7 @@
             let lines = input.split('\n').reverse();
             let result: any = {};
 
-            const traits = ['Strength', 'Agility', 'Finesse', 'Instinct', 'Presence', 'Knowledge'];
+            const traits = ['Spellcast', 'Strength', 'Agility', 'Finesse', 'Instinct', 'Presence', 'Knowledge'];
 
             result.type = type;
             result.tier = parseInt(tier);

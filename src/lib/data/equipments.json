@@ -2296,5 +2296,611 @@
         "description": "Gain a bonus to your damage rolls equal to your level."
       }
     ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Shortsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+3 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Round Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d4+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Protective",
+        "description": "+2 to Armor Score"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Tower Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Barrier",
+        "description": "+3 to Armor Score; −1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Small Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d8+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+3 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Whip",
+    "trait": "Presence",
+    "range": "Very Close",
+    "damage": "d6+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Startling",
+        "description": "Mark a Stress to crack the whip and force all adversaries within Melee range back to Close range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Grappler",
+    "trait": "Finesse",
+    "range": "Close",
+    "damage": "d6+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Hooked",
+        "description": "On a successful attack, you can pull the target into Melee range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Improved Hand Crossbow",
+    "trait": "Finesse",
+    "range": "Far",
+    "damage": "d6+3",
+    "damageType": "phy",
+    "burden": "One-Handed"
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Spiked Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Double ",
+        "description": "+1 to Armor Score; +1 to primary weapon damage within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Parrying Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d6+2",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Parry",
+        "description": "When you are attacked, roll this weapon's damage dice. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 2,
+    "name": "Returning Axe",
+    "trait": "Agility",
+    "range": "Close",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Returning",
+        "description": "When this weapon is thrown within its range, appears in your hand immediately after the attack."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Shortsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+4 to primary weapon damage to targets within"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Melee range Advanced Round Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d4+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Protective",
+        "description": "+3 to Armor Score"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Tower Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Barrier",
+        "description": "+4 to Armor Score; −1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Small Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d8+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+4 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Whip",
+    "trait": "Presence",
+    "range": "Very Close",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Startling",
+        "description": "Mark a Stress to crack the whip and force all adversaries within Melee range back to Close range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Grappler",
+    "trait": "Finesse",
+    "range": "Close",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Hooked",
+        "description": "On a successful attack, you can pull the target into Melee range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Advanced Hand Crossbow",
+    "trait": "Finesse",
+    "range": "Far",
+    "damage": "d6+5",
+    "damageType": "phy",
+    "burden": "One-Handed"
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Buckler",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d4+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Deflecting",
+        "description": "When you are attacked, you can mark an Armor Slot to gain a bonus to your Evasion equal to your available Armor Score against the attack."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Powered Gauntlet",
+    "trait": "Knowledge",
+    "range": "Close",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Charged",
+        "description": "Mark a Stress to gain a +1 bonus to your Proficiency on a primary weapon attack."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 3,
+    "name": "Hand Sling",
+    "trait": "Finesse",
+    "range": "Very Far",
+    "damage": "d6+4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Versatile",
+        "description": "This weapon can also be used with these statistics—Finesse, Close, d8+4."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Shortsword",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+5 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Round Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d4+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Protective",
+        "description": "+4 to Armor Score"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Tower Shield",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Barrier",
+        "description": "+5 to Armor Score; −1 to Evasion."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Small Dagger",
+    "trait": "Finesse",
+    "range": "Melee",
+    "damage": "d8+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Paired",
+        "description": "+5 to primary weapon damage to targets within Melee range"
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Whip",
+    "trait": "Presence",
+    "range": "Very Close",
+    "damage": "d6+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Startling",
+        "description": "Mark a Stress to crack the whip and force all adversaries within Melee range back to Close range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Grappler",
+    "trait": "Finesse",
+    "range": "Close",
+    "damage": "d6+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Hooked",
+        "description": "On a successful attack, you can pull the target into Melee range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Legendary Hand Crossbow",
+    "trait": "Finesse",
+    "range": "Far",
+    "damage": "d6+7",
+    "damageType": "phy",
+    "burden": "One-Handed"
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Braveshield",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d4+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Sheltering",
+        "description": "When you mark an Armor Slot, it reduces damage for you and all allies within Melee range of you who took the same damage."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Knuckle Claws",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d6+8",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Doubled ",
+        "description": "When you make an attack with your primary weapon, you can deal damage to another target within Melee range."
+      }
+    ]
+  },
+  {
+    "type": "Secondary Weapon",
+    "tier": 4,
+    "name": "Primer Shard",
+    "trait": "Instinct",
+    "range": "Very Close",
+    "damage": "d4",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Locked ",
+        "description": "On a successful attack, your next attack against the same target with your primary weapon automatically succeeds."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 2,
+    "name": "Improved Light-Frame Wheelchair",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+3",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Quick",
+        "description": "When you make an attack, you can mark a Stress to target another creature within range."
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 2,
+    "name": "Improved Heavy-Frame Wheelchair",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d12+6",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 2,
+    "name": "Improved Arcane-Frame Wheelchair",
+    "trait": "Spellcast",
+    "range": "Far",
+    "damage": "d6+3",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Reliable",
+        "description": "+1 to attack rolls"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 3,
+    "name": "Advanced Light-Frame Wheelchair",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+6",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Quick",
+        "description": "When you make an attack, you can mark"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 3,
+    "name": "Advanced Heavy-Frame Wheelchair",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d12+9",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 3,
+    "name": "Advanced Arcane-Frame Wheelchair",
+    "trait": "Spellcast",
+    "range": "Far",
+    "damage": "d6+6",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Reliable",
+        "description": "+1 to attack rolls"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 4,
+    "name": "Legendary Light-Frame Wheelchair",
+    "trait": "Agility",
+    "range": "Melee",
+    "damage": "d8+9",
+    "damageType": "phy",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Quick",
+        "description": "When you make an attack, you can mark a Stress to target another creature within range"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 4,
+    "name": "Legendary Heavy-Frame Wheelchair",
+    "trait": "Strength",
+    "range": "Melee",
+    "damage": "d12+12",
+    "damageType": "phy",
+    "burden": "Two-Handed",
+    "features": [
+      {
+        "name": "Heavy",
+        "description": "−1 to Evasion"
+      }
+    ]
+  },
+  {
+    "type": "Primary Weapon",
+    "tier": 4,
+    "name": "Legendary Arcane-Frame Wheelchair",
+    "trait": "Spellcast",
+    "range": "Far",
+    "damage": "d6+9",
+    "damageType": "mag",
+    "burden": "One-Handed",
+    "features": [
+      {
+        "name": "Reliable",
+        "description": "+1 to attack rolls"
+      }
+    ]
   }
 ]
