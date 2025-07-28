@@ -74,7 +74,7 @@
                 There are no previous modifications by others.
             </p>
             <p>
-                This fan project is in no way, shape or form associated with Daggerheart, Critical Role or Darrigton Press.
+                This fan project is in no way, shape or form associated with Critical Role or Darrigton Press.
             </p>
         </div>
         <img class="w-64 m-auto" src="{dhCompatibleSVG}" alt="Daggerheart Compatible"/>
