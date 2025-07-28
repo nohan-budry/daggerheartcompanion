@@ -9,7 +9,7 @@
     let isSearchOpen = $state(false);
 
     let navLinks = [
-        {path: `${base}/`, name: 'Home'},
+        {path: `${base}/`, name: 'Daggerheart Companion'},
         {path: `${base}/ancestries`, name: 'Ancestries'},
         {path: `${base}/communities`, name: 'Communities'},
         {path: `${base}/classes`, name: 'Classes'},
@@ -67,16 +67,21 @@
 <footer class="bg-blue-100">
     <div class="w-app flex flex-col gap-4 p-4 md:flex-row">
         <div>
-            This product includes materials from the Daggerheart System Reference Document 1.0,
-            © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License.
-            More information can be found at <a class="text-blue-400" href="https://www.daggerheart.com">https://www.daggerheart.com</a>.
-            There are no previous modifications by others.
+            <p>
+                This product includes materials from the Daggerheart System Reference Document 1.0,
+                © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License.
+                More information can be found at <a class="focus:underline text-blue-400" href="https://www.daggerheart.com">https://www.daggerheart.com</a>.
+                There are no previous modifications by others.
+            </p>
+            <p>
+                This fan project is in no way, shape or form associated with Daggerheart, Critical Role or Darrigton Press.
+            </p>
         </div>
         <img class="w-64 m-auto" src="{dhCompatibleSVG}" alt="Daggerheart Compatible"/>
     </div>
     <div class="p-4 w-app feedback">
         <h1>Feedback or Bug Reports?</h1>
-        <p>Found a bug or have an idea for improvement? Feel free to reach out: <a href="mailto:nohan@daggerheartcompanion.app">nohan@daggerheartcompanion.app</a></p>
+        <p>Found a bug or have an idea for improvement? Feel free to reach out: <a class="focus:underline" href="mailto:nohan@daggerheartcompanion.app">nohan@daggerheartcompanion.app</a></p>
     </div>
 </footer>
 

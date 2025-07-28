@@ -26,6 +26,26 @@
             support development, you can support it here: <a class="text-blue-300" href="https://ko-fi.com/nohan" target="_blank">ko-fi.com/nohan</a>
         </p>
     </div>
+
+    <h2>Available Content</h2>
+
+    <ul>
+        <li>Every Ancestries and Communities</li>
+        <li>Every Classes, Subclasses and Domains</li>
+        <li>Every Equipments and Loots</li>
+        <li>Every Adversaries and Environments</li>
+        <li>Search feature (accessible via crtl+k or cmd+k)</li>
+    </ul>
+
+    <h2>Future Content</h2>
+
+    <ul>
+        <li>Daggeheart Rules and Core mechanies</li>
+        <li>GM rules and guidances</li>
+        <li>GM Screen? Homebrew manager? </li>
+        <li>Encounter builder? For now, <a class="text-blue-400 " href="https://freshcutgrass.app" target="_blank">FreshCutGrass.app</a> handles it really well.</li>
+        <li>Your idea? (see feedback info in the footer below)</li>
+    </ul>
 </main>
 
 <style lang="postcss">
@@ -35,7 +55,19 @@
         @apply text-2xl font-semibold;
     }
 
-    p {
+    h2 {
+        @apply text-xl font-semibold;
+    }
+
+    h2, ul, p {
         @apply my-4;
+    }
+
+    ul {
+        @apply pl-4 list-disc list-inside;
+    }
+
+    a {
+        @apply focus:underline;
     }
 </style>
