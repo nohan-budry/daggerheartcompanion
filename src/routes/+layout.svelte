@@ -44,6 +44,12 @@
 
 <svelte:window onkeydown={handleKeyDown}/>
 
+<svelte:head>
+    <title>Daggerheart Companion</title>
+    <meta name="description" content="Daggerheart Companion provides quick and easy access to content from Daggerheart System Reference Document 1.0 (SRD 1.0)." />
+    <meta name="keywords" content="Daggerheart, Daggerheart tools, Daggerheart companion, daggerheart helper, Daggerheart SRD" />
+</svelte:head>
+
 <SearchComponent isOpen={isSearchOpen} close={searchClose}/>
 
 <div class="min-h-screen -mb-4 pb-8">
