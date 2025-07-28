@@ -20,13 +20,6 @@
         <p>There are still a lot of content and features to add. So keep visiting regularly to check out what's new.</p>
     </div>
 
-    <div class="mt-4">
-        <p class="border-l-2 border-l-blue-200 pl-4 italic text-gray-400">
-            This is a non-commercial fan project based on the Daggerheart SRD 1.0. If you enjoy the tool and want to
-            support development, you can support it here: <a class="text-blue-300" href="https://ko-fi.com/nohan" target="_blank">ko-fi.com/nohan</a>
-        </p>
-    </div>
-
     <h2>Available Content</h2>
 
     <ul>
