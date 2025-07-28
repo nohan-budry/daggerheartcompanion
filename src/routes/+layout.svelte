@@ -17,6 +17,7 @@
         {path: `${base}/equipments`, name: 'Equipments'},
         {path: `${base}/loots`, name: 'Loots'},
         {path: `${base}/adversaries`, name: 'Adversaries'},
+        {path: `${base}/environments`, name: 'Environments'},
     ];
 
     function isCurrentPage(path: string): boolean {

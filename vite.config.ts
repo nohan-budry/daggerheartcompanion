@@ -9,6 +9,7 @@ import type {ClassData} from "./src/lib/models/ClassData";
 import type Community from "./src/lib/models/Community";
 import type Ancestry from "./src/lib/models/Ancestry";
 import {slugify} from "./src/lib/utils/slugify";
+import type {Environment} from "$lib/models/Environment";
 
 async function generateIndex() {
     console.log('Generating search index...');
@@ -21,7 +22,7 @@ async function generateIndex() {
     let reusableLoots = await import('./src/lib/data/loots/reusables.json') as Loot[];
     let consumableLoots = await import('./src/lib/data/loots/consumables.json') as Loot[];
     let adversaries = await import('./src/lib/data/adversaries.json') as Adversary[];
-
+    let environments = await import('./src/lib/data/environments.json') as Environment[];
 
     let searchIndex: { name: string, path: string, description?: string, source: string }[] = [];
 
@@ -156,6 +157,21 @@ async function generateIndex() {
             path: '/adversaries#adversary-' + slugify(adversary.name),
             description: `${feature.type} ${feature.description}`,
             source: 'SRD 1.0 - Adversary: ' + adversary.name
+        }))
+    ]));
+
+    searchIndex.push(...environments.flatMap(environment => [
+        {
+            name: environment.name,
+            path: '/environments#environment-' + slugify(environment.name),
+            description: `Tier ${environment.tier} ${environment.type}: ${environment.description}`,
+            source: 'SRD 1.0 - Environment'
+        },
+        ...environment.features.map((feature) => ({
+            name: feature.name,
+            path: '/environments#environment-' + slugify(environment.name),
+            description: `${feature.type}: ${feature.description}`,
+            source: 'SRD 1.0 - Environment: ' + environment.name
         }))
     ]));
 

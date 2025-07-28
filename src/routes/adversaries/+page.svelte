@@ -22,7 +22,7 @@
     {#each tiers as tier, index}
         <h2>Tier {index + 1}</h2>
 
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
             {#each tier as adversary}
                 <div id={'adversary-' + slugify(adversary.name)}
                      class="flex flex-col gap-2 border p-2 w-full">
@@ -70,6 +70,8 @@
                         <span class="italic">{bonus(adversary.attack.bonus)} {adversary.attack.range} {adversary.attack.damage}</span>
                     </div>
 
+                    <h4>Features</h4>
+
                     {#each adversary.features as feature}
                         <div>
                             <span class="font-semibold">{feature.name}:</span>
@@ -91,5 +93,9 @@
 
     h2, h3 {
         @apply text-xl font-semibold;
+    }
+
+    h4 {
+        @apply text-xl;
     }
 </style>
