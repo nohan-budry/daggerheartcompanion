@@ -1,38 +1,21 @@
-# sv
+# DaggerheartCompanion.app
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This web app is a personal project I created while learning and preparing to play Daggerheart with friends.
+It includes content from the Daggerheart SRD 1.0.
 
-## Creating a project
+You'll find all the essential information for Game Masters and Players with a focus on game content for now.
+Additional information about game mechanics and rules will be added over time.
 
-If you're seeing this, you've probably already done this step. Congrats!
+This is a non-commercial fan project. It only includes material available in the SRD, and is meant to make
+that information easier to access and use.
 
-```bash
-# create a new project in the current directory
-npx sv create
+There are still a lot of content and features to add. So keep visiting regularly to check out what's new.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## License
 
-## Developing
+This product includes materials from the Daggerheart System Reference Document 1.0,
+© Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License.
+More information can be found at <a class="focus:underline text-blue-400" href="https://www.daggerheart.com">https://www.daggerheart.com</a>.
+There are no previous modifications by others.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+This fan project is in no way, shape or form associated with Critical Role or Darrigton Press.
