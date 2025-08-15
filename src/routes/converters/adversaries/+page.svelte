@@ -11,6 +11,29 @@
         return lines.length > 0 ? lines[lines.length - 1] : undefined;
     }
 
+
+    function convertMultiAdversariesInput(input: string): any {
+        if (input.length == 0) {
+            return '-';
+        }
+
+        try {
+            let lines = input.split('\n').reverse();
+
+            let elements: string[] = [];
+            while (peek(lines)) {
+                if (/^([A-Z]|\s|‑|-)+$/.test(peek(lines)!) && !peek(lines)!.includes("FEATURES")) {
+                    elements.push(pop(lines)!);
+                } else {
+                    elements[elements.length - 1] += "\n" + pop(lines)!;
+                }
+            }
+            return elements.map(convertAdversaryInput).join(",\n");
+        } catch (error) {
+            return error;
+        }
+    }
+
     function convertAdversaryInput(input: string): any {
         if (input.length == 0) {
             return '-';
@@ -29,7 +52,7 @@
                 .map(line => line.slice(0, 1).toUpperCase() + line.slice(1))
                 .join(" ");
 
-            result.tier = 1;
+            result.tier = 2;
             result.type = pop(lines)!.split(" ").slice(2).join(" ");
             result.description = pop(lines)!;
             while (!peek(lines)!.startsWith("Motives & Tactics: ")) {
@@ -48,7 +71,7 @@
             result.hitPoints = parseInt(data[2].split(": ")[1]);
             result.stress = parseInt(data[3].split(": ")[1]);
             result.attack = {
-                bonus: parseInt(data[4].split(": ")[1]),
+                bonus: parseInt(data[4].split(": ")[1].replaceAll('−', '-')),
                 name: data[5].split(": ")[0],
                 range: data[5].split(": ")[1],
                 damage: data[6],
@@ -81,7 +104,7 @@
     }
 
     let input = $state("");
-    let convertedInput = $derived(convertAdversaryInput(input));
+    let convertedInput = $derived(convertMultiAdversariesInput(input));
 </script>
 
 <label for="input" class="text-2xl mb-4 block">Input</label>
@@ -94,5 +117,5 @@
         Copy
     </button>
 </div>
-
-<pre>{convertedInput}</pre>
+<!--<p class="mb-4">{JSON.parse(convertedInput ?? '[]')?.length}</p>-->
+<pre style="white-space: pre-wrap; overflow-wrap: break-word;">{convertedInput}</pre>
