@@ -62,12 +62,8 @@ export default class ContentApiService {
         return this.get<any>('equipments.json');
     }
 
-    private getConsumables(): Promise<Loot[]> {
-        return this.get<any>('loots/consumables.json');
-    }
-
-    private getReusables(): Promise<Loot[]> {
-        return this.get<any>('loots/reusables.json');
+    private getLoots(): Promise<Loot[]> {
+        return this.get<any>('loots.json');
     }
 
     public getContent(): Promise<Content> {
@@ -77,8 +73,7 @@ export default class ContentApiService {
             this.getClasses(),
             this.getDomains(),
             this.getEquipments(),
-            this.getConsumables(),
-            this.getReusables(),
+            this.getLoots(),
             this.getAdversaries(),
             this.getEnvironments()
         ]).then((
@@ -88,8 +83,7 @@ export default class ContentApiService {
                 classes,
                 domains,
                 equipments,
-                consumables,
-                reusables,
+                loots,
                 adversaries,
                 environments,
             ]: [
@@ -98,7 +92,6 @@ export default class ContentApiService {
                 ClassData[],
                 Domain[],
                 Equipment[],
-                Loot[],
                 Loot[],
                 Adversary[],
                 Environment[],
@@ -110,8 +103,7 @@ export default class ContentApiService {
                 classes,
                 domains,
                 equipments,
-                consumables,
-                reusables,
+                loots,
                 adversaries,
                 environments,
             );

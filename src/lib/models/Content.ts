@@ -33,8 +33,7 @@ export default class Content {
     classes: ClassData[];
     domains: Domain[];
     equipments: Equipment[];
-    consumables: Loot[];
-    reusables: Loot[];
+    loots: Loot[];
     adversaries: Adversary[];
     environments: Environment[];
     searchIndex: SearchIndexItem[] = [];
@@ -45,8 +44,7 @@ export default class Content {
         classes: ClassData[],
         domains: Domain[],
         equipments: Equipment[],
-        consumables: Loot[],
-        reusables: Loot[],
+        loots: Loot[],
         adversaries: Adversary[],
         environments: Environment[],
     ) {
@@ -56,8 +54,7 @@ export default class Content {
         this.classes = classes;
         this.domains = domains;
         this.equipments = equipments;
-        this.consumables = consumables;
-        this.reusables = reusables;
+        this.loots = loots;
         this.environments = environments;
 
         this.generateIndex();
@@ -171,16 +168,9 @@ export default class Content {
             source: 'SRD 1.0 - Equipment'
         })));
 
-        this.searchIndex.push(...this.reusables.map(loot => ({
+        this.searchIndex.push(...this.loots.map(loot => ({
             name: loot.name,
-            path: '/loots/reusables' + '#loot-' + slugify(loot.name),
-            description: loot.description,
-            source: 'SRD 1.0 - Loot: ' + loot.type
-        })));
-
-        this.searchIndex.push(...this.consumables.map(loot => ({
-            name: loot.name,
-            path: '/loots/consumables' + '#loot-' + slugify(loot.name),
+            path: '/loots/' + slugify(loot.type) + '#loot-' + slugify(loot.name),
             description: loot.description,
             source: 'SRD 1.0 - Loot: ' + loot.type
         })));
