@@ -12,7 +12,7 @@
     }
 
 
-    function convertMultiAdversariesInput(input: string): any {
+    function convertMultiAdversariesInput(input: string, tier: number): any {
         if (input.length == 0) {
             return '-';
         }
@@ -22,19 +22,24 @@
 
             let elements: string[] = [];
             while (peek(lines)) {
-                if (/^([A-Z]|\s|‑|-)+$/.test(peek(lines)!) && !peek(lines)!.includes("FEATURES")) {
+                if (peek(lines)!.includes("Daggerheart SRD")) {
+                    pop(lines)!;
+                } if (/^([A-Z]|\s|‑|-|:)+$/.test(peek(lines)!) && !peek(lines)!.includes("FEATURES")) {
                     elements.push(pop(lines)!);
+                    while (/^([A-Z]|\s|‑|-|:)+$/.test(peek(lines)!) && !peek(lines)!.includes("FEATURES")) {
+                        elements[elements.length - 1] += " " + pop(lines)!;
+                    }
                 } else {
                     elements[elements.length - 1] += "\n" + pop(lines)!;
                 }
             }
-            return elements.map(convertAdversaryInput).join(",\n");
+            return elements.map((e) => convertAdversaryInput(e, tier)).join(",\n");
         } catch (error) {
             return error;
         }
     }
 
-    function convertAdversaryInput(input: string): any {
+    function convertAdversaryInput(input: string, tier: number): any {
         if (input.length == 0) {
             return '-';
         }
@@ -52,7 +57,7 @@
                 .map(line => line.slice(0, 1).toUpperCase() + line.slice(1))
                 .join(" ");
 
-            result.tier = 2;
+            result.tier = tier;
             result.type = pop(lines)!.split(" ").slice(2).join(" ");
             result.description = pop(lines)!;
             while (!peek(lines)!.startsWith("Motives & Tactics: ")) {
@@ -103,12 +108,22 @@
         }
     }
 
+    let tier = $state("1");
     let input = $state("");
-    let convertedInput = $derived(convertMultiAdversariesInput(input));
+    let convertedInput = $derived(convertMultiAdversariesInput(input, parseInt(tier)));
 </script>
 
 <label for="input" class="text-2xl mb-4 block">Input</label>
-<textarea id="input" bind:value={input} class="w-full border p-2" rows="10"></textarea>
+<textarea id="input" bind:value={input} class="w-full border p-2 mb-4" rows="10"></textarea>
+<div class="flex items-center gap-4">
+    <label for="tier" class="text-2xl">Tier</label>
+    <select id="tier" class="border p-2 min-w-16" bind:value={tier}>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</div>
 
 <div class="my-4 flex gap-4">
     <h1 class="text-2xl">Result</h1>
