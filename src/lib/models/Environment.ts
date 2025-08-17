@@ -4,7 +4,7 @@ export interface EnvironmentFeature extends Feature {
     type?: string
 }
 
-export interface Environment {
+export default interface Environment {
     name: string,
     tier: number,
     type: string,

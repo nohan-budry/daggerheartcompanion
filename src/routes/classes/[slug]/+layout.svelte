@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type {ClassData, Subclass} from "$lib/models/ClassData";
     import {base} from "$app/paths";
     import {slugify} from "$lib/utils/slugify";
     import {page} from "$app/state";
+    import type {Subclass} from "$lib/models/ClassData";
 
     let {data, children} = $props();
-    let {classData} = $derived(data as { classData: ClassData });
+    let {classData} = $derived(data);
 
     function traitBonuses(traits: { [k: string]: number }): string[] {
         return Object.entries(traits).map((trait) => traitBonusString(...trait));

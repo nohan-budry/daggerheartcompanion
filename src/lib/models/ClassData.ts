@@ -25,7 +25,7 @@ export interface Subclass {
     };
 }
 
-export interface ClassData {
+export default interface ClassData {
     name: string
     description: string
     domains: string[]

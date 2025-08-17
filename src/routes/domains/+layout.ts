@@ -1,9 +1,6 @@
 import type {LayoutLoad} from "./$types";
 
-import rawDomains from '$lib/data/domains.json';
-import type Domain from "$lib/models/Domain";
-
-export const load: LayoutLoad = () => {
-    let domains: Domain[] = rawDomains;
-    return {domains};
+export const load: LayoutLoad = async ({parent}) => {
+    let {content} = await parent();
+    return {domains: content.domains};
 }

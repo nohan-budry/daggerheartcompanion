@@ -5,7 +5,8 @@
     import {base} from "$app/paths";
     import SearchComponent from "$lib/components/search-component/SearchComponent.svelte";
 
-    let {children} = $props();
+    let {children, data} = $props();
+    let {content} = $derived(data);
     let isSearchOpen = $state(false);
 
     let navLinks = [
@@ -50,7 +51,7 @@
     <meta name="keywords" content="Daggerheart, Daggerheart tools, Daggerheart companion, daggerheart helper, Daggerheart SRD" />
 </svelte:head>
 
-<SearchComponent isOpen={isSearchOpen} close={searchClose}/>
+<SearchComponent searchIndex={content.searchIndex} isOpen={isSearchOpen} close={searchClose}/>
 
 <div class="min-h-screen -mb-4 pb-8">
     <nav class="bg-blue-100">

@@ -5,7 +5,7 @@ export interface AdversaryFeature extends Feature {
     value?: string
 }
 
-export interface Adversary {
+export default interface Adversary {
     name: string,
     tier: number,
     type: string,

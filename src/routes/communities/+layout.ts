@@ -1,10 +1,7 @@
 import type {LayoutLoad} from "./$types";
-import type Community from "$lib/models/Community";
-
-import rawCommunities from "$lib/data/communities.json";
 
 
-export const load: LayoutLoad = () => {
-    let communities: Community[] = rawCommunities;
-    return {communities};
+export const load: LayoutLoad = async ({parent}) => {
+    let {content} = await parent();
+    return {communities: content.communities};
 }

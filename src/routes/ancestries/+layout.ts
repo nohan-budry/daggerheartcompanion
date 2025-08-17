@@ -1,9 +1,6 @@
 import type {LayoutLoad} from "./$types";
-import type Ancestry from "$lib/models/Ancestry";
 
-import rawAncestries from '$lib/data/ancestries.json';
-
-export const load: LayoutLoad = () => {
-    let ancestries: Ancestry[] = rawAncestries;
-    return {ancestries};
+export const load: LayoutLoad = async ({parent}) => {
+    let {content} = await parent();
+    return {ancestries: content.ancestries};
 }

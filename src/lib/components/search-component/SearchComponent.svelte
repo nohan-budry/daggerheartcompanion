@@ -1,11 +1,11 @@
 <script lang="ts">
-    // @ts-ignore
-    import searchIndex from "virtual:dh-search-index";
     import {base} from "$app/paths";
+    import type {SearchIndexItem} from "$lib/models/Content";
 
     let {
-        isOpen = false,
-        close
+        searchIndex, isOpen = false, close
+    }: {
+        searchIndex: SearchIndexItem[], isOpen: boolean, close: () => void
     } = $props();
 
     $effect(() => {
@@ -74,15 +74,20 @@
             }
         }
     }
+
+    function closeSearch(event: MouseEvent) {
+        if (event.target === event.currentTarget) {
+            close();
+        }
+    }
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>
 
 {#if isOpen}
-    <div class="search-background" onclick={close} role="presentation" aria-hidden="true">
+    <div class="search-background" onclick={closeSearch} role="presentation">
         <div id="main-search" class="search-container overflow-scroll"
-             role="presentation" aria-hidden="true" aria-label="Search"
-             onclick={(e) => e.stopPropagation()}>
+             role="presentation" aria-label="Search">
             <div role="dialog" aria-modal="true" aria-label="Search">
                 <div class="sticky top-0 left-0 p-4 bg-white">
                     <div>
