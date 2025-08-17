@@ -3,6 +3,7 @@ import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.env.NODE_ENV === 'development';
 let basePath = dev ? '/daggerheartcompanion' : (process.env.PUBLIC_APP_PATH ?? '');
+let version = dev ? 'dev' : (process.env.PUBLIC_APP_VERSION ?? '');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,6 +17,9 @@ const config = {
     adapter: adapter(),
     paths: {
       base: basePath,
+    },
+    version: {
+      name: version,
     },
   },
 };
